@@ -34,6 +34,7 @@ body {
 
 .header-container { 
     padding: 24px;
+    padding-bottom: 23px;
 }
 
 .flex-header {
@@ -106,6 +107,7 @@ color: var(--interactive-elements);
     letter-spacing: 0.02em;
     transition-duration: 250ms;
     transition-timing-function: linear;
+    position: relative;
 }
 
 .nav:hover, 
@@ -113,9 +115,27 @@ color: var(--interactive-elements);
 color: #404BBF;
 }
 
+.nav:hover .line, 
+.nav:focus .line {
+    opacity: 1;
+}
+
 .contacts {
     color: var(--secondary-color);
     font-weight: 400;   
+}
+
+.line {
+    width: 100%;
+    height: 4px;
+    background-color: #404BBF;
+    display: block;
+    border-radius: 2px;
+    opacity: 0;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
+    transform: translateY(20px);
+    position: absolute;
 }
 
 /* ---hero--- */
@@ -612,6 +632,11 @@ color: var(--interactive-elements);
     0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
+.project-card-link:hover .overlay, 
+.project-card-link:focus .overlay {
+    transform: translateY(0);
+}
+
 .project-card-text {
     font-weight: 400;
     font-size: 16px;
@@ -637,3 +662,26 @@ color: var(--interactive-elements);
     align-self: flex-start;
 }
 
+.cards-overlay-block {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    background-color: #4D5AE5;
+    width: 100%;
+    height: 100%;
+    color: #F4F4FD;
+    display: flex;
+    align-items: center;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    padding: 32px;
+    padding-top: 40px;
+    align-items: flex-start;
+    transform: translateY(100%);
+    transition: transform 250ms linear;
+}

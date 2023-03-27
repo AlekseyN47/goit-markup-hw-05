@@ -115,28 +115,36 @@ color: var(--interactive-elements);
 color: #404BBF;
 }
 
-.nav:hover .line, 
-.nav:focus .line {
-    opacity: 1;
-}
-
 .contacts {
     color: var(--secondary-color);
     font-weight: 400;   
 }
 
-.line {
+.studio-line::after {
+    content: '';
     width: 100%;
     height: 4px;
     background-color: #404BBF;
     display: block;
     border-radius: 2px;
-    opacity: 0;
+    position: absolute;
+    left: 0;
+    margin-top: 20px;
+}
+
+.portfolio-line::after {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: #404BBF;
+    display: block;
+    border-radius: 2px;
     transition-duration: 250ms;
     transition-timing-function: linear;
     transform: translateY(20px);
     position: absolute;
 }
+
 
 /* ---hero--- */
 .hero-section {

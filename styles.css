@@ -132,6 +132,14 @@ color: #404BBF;
     margin-top: 20px;
 }
 
+.studio-line {
+    color: #404BBF;
+}
+
+.portfolio-line {
+    color: #404BBF;
+}
+
 .portfolio-line::after {
     content: '';
     width: 100%;
